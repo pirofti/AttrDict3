@@ -2,7 +2,10 @@
 Mixin Classes for Attr-support.
 """
 from abc import ABCMeta, abstractmethod
-from collections.abc import Mapping, MutableMapping, Sequence
+try:
+    from collections.abc import Mapping, MutableMapping, Sequence
+except:
+    from collections import Mapping, MutableMapping, Sequence
 import re
 
 import six

@@ -1,7 +1,10 @@
 """
 A right-favoring Mapping merge.
 """
-from collections.abc import Mapping
+try:
+    from collections.abc import Mapping
+except ImportError:
+    from collections import Mapping
 
 
 __all__ = ['merge']
